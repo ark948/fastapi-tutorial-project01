@@ -12,3 +12,13 @@ async def read_item(q: Annotated[str | None, Query(max_length=5)] = None):
     if q:
         results.update({"q": q})
     return results
+
+@app.get("/items02/")
+async def read_item_with_required_q_ellipsis(q: Annotated[str, Query(min_length=3)] = ...):
+    results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
+    if q:
+        results.update({"q": q})
+    return results
+
+# older version
+# async def read_items(q: str | None = Query(default=None, max_length=50)):

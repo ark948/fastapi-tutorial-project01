@@ -64,3 +64,8 @@ short is set to true in all of these
 NOTE: main got two messy, moving along with main02.py file
 
 12. 'Annoated' can be used to add metadata to parameters
+
+13. extra validation can be added to query parameters, such as min and max length, regular expressions
+
+14. by not providing a default None to a parameter, we will make it required
+there is also another way to achieve this, by using Ellipsis (...). refer to main02.py
