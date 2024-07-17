@@ -25,13 +25,6 @@ async def read_item(skip: int = 0, limit: int = 10):
 # q is also optional and will be None by default
 # here is item_id is path parameter
 # and q is query paramter
-# Query paramter type conversion on 'short':
-# http://127.0.0.1:8000/items/foo?short=1
-# http://127.0.0.1:8000/items/foo?short=True
-# http://127.0.0.1:8000/items/foo?short=true
-# http://127.0.0.1:8000/items/foo?short=on
-# http://127.0.0.1:8000/items/foo?short=yes
-# required parameter, default value parameter, and optional paramter
 @app.get("/items/{item_id}")
 async def read_item(item_id: str, needy: str, skip: int = 0, limit: int | None = None):
     item = {"item_id": item_id, "needy": needy, "skip": skip, "limit": limit}

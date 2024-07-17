@@ -48,3 +48,15 @@ data validation is done using Pydantic
 9. IMPORTANT, path parameter vs query parameter
 localhost/item_id -> item_id is path parameter and will be declared in route definition
 localhost/items/?item=2 -> item is a query parameter
+
+10. parameters can be required...
+can have default value...
+and can be entirely optional
+
+11. fastapi does automatic query conversion:
+# http://127.0.0.1:8000/items/foo?short=1
+# http://127.0.0.1:8000/items/foo?short=True
+# http://127.0.0.1:8000/items/foo?short=true
+# http://127.0.0.1:8000/items/foo?short=on
+# http://127.0.0.1:8000/items/foo?short=yes
+short means true in all of these
