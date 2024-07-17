@@ -39,3 +39,8 @@ localhost/openapi.json
 
 fastapi directly inherits from 'Starlette'
 
+6. use python type annotations or type hints when defining endpoints.
+data validation is done using Pydantic
+
+7. order of paths matter, put fixed paths (no parameter) before the ones that take parameters.
+8. paths can have predefined values, Enum structures can help with this.
