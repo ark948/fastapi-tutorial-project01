@@ -25,11 +25,22 @@ async def read_item(skip: int = 0, limit: int = 10):
 # q is also optional and will be None by default
 # here is item_id is path parameter
 # and q is query paramter
+# Query paramter type conversion on 'short':
+# http://127.0.0.1:8000/items/foo?short=1
+# http://127.0.0.1:8000/items/foo?short=True
+# http://127.0.0.1:8000/items/foo?short=true
+# http://127.0.0.1:8000/items/foo?short=on
+# http://127.0.0.1:8000/items/foo?short=yes
 @app.get("/items/{item_id}")
-async def read_item(item_id: str, q: str | None = None):
+async def read_item(item_id: str, q: str | None = None, short: bool = False):
+    item = {"item_id": item_id}
     if q:
-        return {"item_id": item_id, "q": q}
-    return {"item_id": item_id}
+        item.update({"q": q})
+    if not short:
+        item.update(
+            {"description": "This is an amazing item that has a long description"}
+        )
+    return item
 
 
 @app.get("/users/me")
