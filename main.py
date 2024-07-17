@@ -31,16 +31,19 @@ async def read_item(skip: int = 0, limit: int = 10):
 # http://127.0.0.1:8000/items/foo?short=true
 # http://127.0.0.1:8000/items/foo?short=on
 # http://127.0.0.1:8000/items/foo?short=yes
+# required parameter, default value parameter, and optional paramter
 @app.get("/items/{item_id}")
-async def read_item(item_id: str, q: str | None = None, short: bool = False):
-    item = {"item_id": item_id}
-    if q:
-        item.update({"q": q})
-    if not short:
-        item.update(
-            {"description": "This is an amazing item that has a long description"}
-        )
+async def read_item(item_id: str, needy: str, skip: int = 0, limit: int | None = None):
+    item = {"item_id": item_id, "needy": needy, "skip": skip, "limit": limit}
     return item
+    # item = {"item_id": item_id}
+    # if q:
+    #     item.update({"q": q})
+    # if not short:
+    #     item.update(
+    #         {"description": "This is an amazing item that has a long description"}
+    #     )
+    # return item
 
 # e.g.
 # http://127.0.0.1:8000/users/14/items/152?q=shit&short=true
