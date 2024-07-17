@@ -11,8 +11,11 @@ pre:
 > git init
 - add .gitginore
 - fill in .gitginore
+- add README.md
 > git add .
-> git add README.md
+> git branch -M main (rename branch to main)
+> git remtoe add origin https://github.com/ark948/fastapi-tutorial-project01.git
+> git push --set-upstream origin main
 
 1. to install fastapi (with optional dependencies):
 > pip install fastapi
@@ -27,4 +30,12 @@ save the code in main.py file
 navigate to 127.0.0.1:8000
 also localhost/doc (swagger ui)
 also localhost/redoc (redoc)
+
+4. fastapi uses OpenAPI standard for defining APIs
+(using JSON schema)
+
+5. to view the raw OpenAPI schema:
+localhost/openapi.json
+
+fastapi directly inherits from 'Starlette'
 
