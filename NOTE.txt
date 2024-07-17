@@ -44,3 +44,7 @@ data validation is done using Pydantic
 
 7. order of paths matter, put fixed paths (no parameter) before the ones that take parameters.
 8. paths can have predefined values, Enum structures can help with this.
+
+9. IMPORTANT, path parameter vs query parameter
+localhost/item_id -> item_id is path parameter and will be declared in route definition
+localhost/items/?item=2 -> item is a query parameter

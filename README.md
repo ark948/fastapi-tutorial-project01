@@ -1,2 +1,2 @@
-Learning about fastapi from the official doc:
+Learning fastapi from the official doc:
 https://fastapi.tiangolo.com/tutorial/
