@@ -59,4 +59,8 @@ and can be entirely optional
 # http://127.0.0.1:8000/items/foo?short=true
 # http://127.0.0.1:8000/items/foo?short=on
 # http://127.0.0.1:8000/items/foo?short=yes
-short means true in all of these
+short is set to true in all of these
+
+NOTE: main got two messy, moving along with main02.py file
+
+12. 'Annoated' can be used to add metadata to parameters
