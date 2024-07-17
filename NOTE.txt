@@ -1,0 +1,30 @@
+following the official fastapi documentation tutorial.
+
+url =>
+https://fastapi.tiangolo.com/tutorial/
+
+pre:
+> python -m venv venv
+> venv\Scripts\activate
+> pip install fastapi
+> pip freeze > requirements.txt
+> git init
+- add .gitginore
+- fill in .gitginore
+> git add .
+> git add README.md
+
+1. to install fastapi (with optional dependencies):
+> pip install fastapi
+
+to install fastapi (without optional dependencies):
+> pip install fastapi-slim
+
+2. simple fastapi file
+save the code in main.py file
+
+3. run the server using > fastapi dev main.py
+navigate to 127.0.0.1:8000
+also localhost/doc (swagger ui)
+also localhost/redoc (redoc)
+

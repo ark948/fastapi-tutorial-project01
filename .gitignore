@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+whls/
+*.whl
+*.pyc
+*.db
+*.env
+*.sqlite3
+env
