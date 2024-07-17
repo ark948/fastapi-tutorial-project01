@@ -26,7 +26,8 @@ to install fastapi (without optional dependencies):
 2. simple fastapi file
 save the code in main.py file
 
-3. run the server using > fastapi dev main.py
+3. run the server using:
+> fastapi dev <filename.py>
 navigate to 127.0.0.1:8000
 also localhost/doc (swagger ui)
 also localhost/redoc (redoc)
@@ -69,3 +70,7 @@ NOTE: main got two messy, moving along with main02.py file
 
 14. by not providing a default None to a parameter, we will make it required
 there is also another way to achieve this, by using Ellipsis (...). refer to main02.py
+
+15. query parameters in fastapi can be heavily modified:
+they can have validation, defaults, required, optional, title, description, alias, regext pattern, excluded from schema
+they can be set to deprecated, for when you still want your clients to use them, but the docs to show they are deprecated
