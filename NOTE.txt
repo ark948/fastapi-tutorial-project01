@@ -84,3 +84,8 @@ NOTE: if using 'Annoated' from typing package, make sure fastapi version is newe
 17. a path parameter is always required, because it is part of the endpoint path.
 
 18. IMPORTANT order of parameters do not matter to fastapi, it will detect them by their name.
+
+19. Query and Path, and some other later to be introduced, are subclasses of 'Param' class.
+
+- Continuing on main04.py
+- Body - Multiple Parameters
