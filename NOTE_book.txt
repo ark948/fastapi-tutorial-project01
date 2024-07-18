@@ -59,3 +59,10 @@ mypy (python type checker)
 19. fastapi created by Sebastian Ramirez in 2018, heavily based on Starlette and Pydantic
 
 20. download fastapi, uvicorn, Httpie, requests, httpx
+
+21. create hello.py file as the first application and run with uvicorn internally.
+
+22. use browser, httpie, requests and httpx to send a get request.
+the rest of the book will use requests.
+
+23. Query params come after ?

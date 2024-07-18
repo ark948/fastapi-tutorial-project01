@@ -1,0 +1,11 @@
+- simple request
+> http localhost:8000/hi
+
+- get body only
+> http -b <url>
+
+- get full (body and headers)
+> http -v <url>
+
+- query params can be seprated by space and double equal
+> http -b <url:port> who==Jake
