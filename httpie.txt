@@ -9,3 +9,9 @@
 
 - query params can be seprated by space and double equal
 > http -b <url:port> who==Jake
+
+- param in body
+> http <url> who=Jake
+
+- param as header
+> http -v <url> who:Jake

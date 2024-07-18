@@ -66,3 +66,8 @@ mypy (python type checker)
 the rest of the book will use requests.
 
 23. Query params come after ?
+
+24. query params can also be provided to body of endpoints other than GET (post for example)
+(still in hello.py)
+
+25. Also can be provided through HTTP header
