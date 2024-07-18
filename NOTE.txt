@@ -74,3 +74,13 @@ there is also another way to achieve this, by using Ellipsis (...). refer to mai
 15. query parameters in fastapi can be heavily modified:
 they can have validation, defaults, required, optional, title, description, alias, regext pattern, excluded from schema
 they can be set to deprecated, for when you still want your clients to use them, but the docs to show they are deprecated
+
+16. extra validation and metadata for query parameters can be declared with Query object.
+and extra validation and metadata for path parameters can be declared with Path object.
+- following main03.py file
+
+NOTE: if using 'Annoated' from typing package, make sure fastapi version is newer than 0.95
+
+17. a path parameter is always required, because it is part of the endpoint path.
+
+18. IMPORTANT order of parameters do not matter to fastapi, it will detect them by their name.
