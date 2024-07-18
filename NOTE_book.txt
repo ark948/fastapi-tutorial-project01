@@ -71,3 +71,14 @@ the rest of the book will use requests.
 (still in hello.py)
 
 25. Also can be provided through HTTP header
+
+26. query string are good for optional arguments like pagination
+body for larger inputs, like whole or partial models
+
+27. Response types can be:
+JSONResponse (default)
+HTMLResponse
+PlainTextResponse
+RedirectResponse
+FileResponse
+StreamingResponse
