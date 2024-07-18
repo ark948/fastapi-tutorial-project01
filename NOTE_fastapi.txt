@@ -92,3 +92,6 @@ NOTE: if using 'Annoated' from typing package, make sure fastapi version is newe
 
 
 - aslo staring fastapi modern web development book
+
+
+20. main05.py - using Field from Pydantic
