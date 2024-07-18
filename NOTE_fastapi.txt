@@ -89,3 +89,6 @@ NOTE: if using 'Annoated' from typing package, make sure fastapi version is newe
 
 - Continuing on main04.py
 - Body - Multiple Parameters
+
+
+- aslo staring fastapi modern web development book
