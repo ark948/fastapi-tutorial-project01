@@ -1,0 +1,61 @@
+1. each api defines two thigns:
+    protocol = the control structure
+    format = the content structure
+
+2. before networking, api meant a very close connection, like square function from math library
+3. Remote Procedure Calls (RPCs) were invented to call functions in other processes, on the same machine or others
+e.g. gRPC
+
+4. Messaging - to send small chunks of data. like: Apache Kafka, RabbitMQ, NATS, ZeroMQ
+
+5. communications can have different patterns: request-response, publish-subscribe (pub-sub), Queues
+
+6. Tim Berners-Lee proposed his world wide web:
+HTML to display data, HTTP as client server protocol, URLs as an addressing scheme for web resources
+
+7. Roy Fielding's PHD Thesis, defined REST, an architectural style for HTTP use.
+
+8. REST is: uses http client-server protocol, stateless (each connection is independent), cacheable, resource-based
+
+9. client sends request to RESTful api with data in one of the following areas of an HTTP message:
+headers, the url string, query parameters, body values
+
+10. in turn, http response returns these:
+integer status code, some headers, a body (that can be empty, single, or chunked in successive pieces)
+(note: status code 418 is a april fool's joke)
+
+11. plain ascii can be exchanged among apis, but sometimes more structured data like lists are needed.
+JSON came for this purpose. it replaced XML and SOAP (mostly)
+
+12. JSON:API, a proposal on how to format json responses (a new specification)
+
+13. there are different layers, do not let them mix, keep them separate.
+(the box model)
+
+14. how each layer communicates with other layers:
+client -> web: RESTful HTTP with JSON
+web -> service: models
+service -> data: models
+Data -> databases and services: specific APIs
+
+15. SQL, NoSQL and recently NewSQL
+
+16. Extract, transform, load (ETL)
+
+17. pip + venv is common -> so they made pipenv, and a newer rival, Poetry
+
+18. tools:
+python (3.9+), pip, venv, Pipenv, Poetry
+Black (source formatting)
+Pytest (testing)
+Git, pre-commit
+fastapi (web framework itself)
+uvicorn (asynchronous web server)
+Httpie (a text web client, similar to curl)
+Requests package
+HTTPX (sync/async web client package)
+mypy (python type checker)
+
+19. fastapi created by Sebastian Ramirez in 2018, heavily based on Starlette and Pydantic
+
+20. download fastapi, uvicorn, Httpie, requests, httpx
